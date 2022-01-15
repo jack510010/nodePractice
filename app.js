@@ -1,9 +1,7 @@
-let path = require("path");
+const url = require("url");
 
-console.log(path.extname(__filename));
+const pandaUrl = "http://127.0.0.1:5500/40form.html?file=&InputName=albert&gender=male&telephone=0920525290&email=aaa%40gmail.com&age=30&password=12345678&news=newspaper"
 
-console.log(path.basename(__filename));
+const parsedUrl = url.parse(pandaUrl, true);
 
-console.log(__filename);
-
-console.log(__dirname);
+console.log(typeof parsedUrl.query);
