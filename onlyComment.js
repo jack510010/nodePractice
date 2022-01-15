@@ -89,4 +89,17 @@ function可以是Anonymous、normal、error
 
     console.log("file has been written.");
 });
+
+*fs.readFile() 意思是讀取一份文件
+
+*fs.readFile()的括弧裡面有好幾個參數
+
+*fs.readFile("第一個是要讀取的文件檔名路徑", "第二個是encoding也就是utf8", "第三個是function")
+function裡面有兩個部分，第一個是error，第二個是要獲得的data
+
+fs.readFile("./try.txt", "utf8", (e, data) => {
+    if(e) throw e;
+    console.log(data);
+});
+
 */
