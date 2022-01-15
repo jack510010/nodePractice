@@ -43,3 +43,30 @@ let path = require("path");
 * 上述四個呈現出來的東西是不同的
 https://nodejs.org/dist/latest-v16.x/docs/api/path.html#pathextnamepath 這裡有很多path的用法，雖然是英文
 */
+//-------------------------------------------------------------------------------------------------------
+/*
+const url = require("url");
+
+const pandaUrl = "http://127.0.0.1:5500/40form.html?file=&InputName=albert&gender=male&telephone=0920525290&email=aaa%40gmail.com&age=30&password=12345678&news=newspaper"
+
+const parsedUrl = url.parse(pandaUrl, true);
+
+! console.log(parsedUrl.host); 其結果是127.0.0.1:5500。 可以得到網址的前半段
+
+! console.log(parsedUrl.hostname); 其結果是127.0.0.1。 差別在於有無port，就是埠號『:5500』
+
+! console.log(parsedUrl.pathname); 其結果是/40form.html。 可以得到檔名
+
+! console.log(parsedUrl.path); 其結果是/40form.html?file=&InputName=albert&gender=male&telephone=0920525290&email=aaa%40gmail.com&age=30&password=12345678&news=newspaper。 問號後面那串全部都有。
+
+! console.log(parsedUrl.query);  其結果是 [Object: null prototype] {
+  file: '',
+  InputName: 'albert',
+  gender: 'male',
+  telephone: '0920525290',
+  email: 'aaa@gmail.com',
+  age: '30',
+  password: '12345678',
+  news: 'newspaper'}
+! 可以得到query?問號後面那串的值
+*/
