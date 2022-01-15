@@ -41,4 +41,5 @@ let path = require("path");
 ! console.log(__dirname); 會呈到父層的資料夾路徑  例如 /Users/yungchen/Desktop/Node-js
 
 * 上述四個呈現出來的東西是不同的
+https://nodejs.org/dist/latest-v16.x/docs/api/path.html#pathextnamepath 這裡有很多path的用法，雖然是英文
 */
