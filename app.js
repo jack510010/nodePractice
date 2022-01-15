@@ -1,5 +1,5 @@
-let greeting = require("./greeting");
+let path = require("path");
 
-let myName = "Tinaちゃんは綺麗。";
+let newPath = path.join(__dirname, "Albert.js");
 
-greeting.sayHi(myName);
+console.log(newPath);
