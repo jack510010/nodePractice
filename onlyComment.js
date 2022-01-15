@@ -1,6 +1,8 @@
 //! 任何會要求你登入的網站基本上都是動態網站。 in English meaning.  Any kind of websites that require you to login is somehow dynamic.
 //* 例如 facebook 跟 YouTube 都是 dynamic websites。
 
+const path = require("path/posix");
+
 // Module Wrapper
 
 
@@ -23,3 +25,6 @@ The convenience variables __filename and __dirname, containing the module's abso
 (function(exports, require, module, __filename, __dirname) {
 // Module code actually lives in here
 });
+
+// path.join() 意思基本上就是把兩個path相加在一起。而且他會return一個值，例如：/Users/yungchen/Desktop/Node-js/Albert.js。
+// node.js 『path』是內建的function
