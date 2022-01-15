@@ -70,3 +70,23 @@ const parsedUrl = url.parse(pandaUrl, true);
   news: 'newspaper'}
 ! 可以得到query?問號後面那串的值
 */
+//------------------------------------------------------------------------------------------------
+
+/* 
+fs => file system 可以在javascript裡面製作一些文件，可以做文字的紀錄
+
+const fs = require("fs");
+
+*fs.writeFile() 『writeFile』意思就是要寫一個文件
+
+*fs.writeFile()的括弧裡面有好幾個參數
+
+*fs.writeFile("第一個是file的名稱", "第二個是你要寫進去的文字", "第三個是要放入一個function")
+function可以是Anonymous、normal、error
+
+例如：fs.writeFile("try.txt", "Today is a good day.", e => {
+    if(e) throw e;
+
+    console.log("file has been written.");
+});
+*/
