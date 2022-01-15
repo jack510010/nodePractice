@@ -2,8 +2,7 @@
 
 const fs = require("fs");
 
-fs.writeFile("try.txt", "Today is a good day.", e => {
+fs.readFile("./try.txt", "utf8", (e, data) => {
     if(e) throw e;
-
-    console.log("file has been written.");
+    console.log(data);
 });
