@@ -1,7 +1,9 @@
-const url = require("url");
+//fs => file system 可以在javascript裡面製作一些文件
 
-const pandaUrl = "http://127.0.0.1:5500/40form.html?file=&InputName=albert&gender=male&telephone=0920525290&email=aaa%40gmail.com&age=30&password=12345678&news=newspaper"
+const fs = require("fs");
 
-const parsedUrl = url.parse(pandaUrl, true);
+fs.writeFile("try.txt", "Today is a good day.", e => {
+    if(e) throw e;
 
-console.log(typeof parsedUrl.query);
+    console.log("file has been written.");
+});
