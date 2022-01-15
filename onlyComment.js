@@ -28,3 +28,17 @@ The convenience variables __filename and __dirname, containing the module's abso
 
 // path.join() 意思基本上就是把兩個path相加在一起。而且他會return一個值，例如：/Users/yungchen/Desktop/Node-js/Albert.js。
 // node.js 『path』是內建的function
+
+/*
+let path = require("path");
+
+! console.log(path.extname(__filename));   會呈現.js  .css  .html  .php  等等
+
+! console.log(path.basename(__filename));  會呈現檔名 例如 app.js  index.html  style.css
+
+! console.log(__filename); 會呈現完整的資料夾路徑  例如 /Users/yungchen/Desktop/Node-js/app.js
+
+! console.log(__dirname); 會呈到父層的資料夾路徑  例如 /Users/yungchen/Desktop/Node-js
+
+* 上述四個呈現出來的東西是不同的
+*/
