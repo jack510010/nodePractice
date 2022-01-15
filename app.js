@@ -1,5 +1,9 @@
 let path = require("path");
 
-let newPath = path.join(__dirname, "Albert.js");
+console.log(path.extname(__filename));
 
-console.log(newPath);
+console.log(path.basename(__filename));
+
+console.log(__filename);
+
+console.log(__dirname);
