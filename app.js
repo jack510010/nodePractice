@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');  // 一開始先取得 bodyParser 的 module
 
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));  // 然後寫一個middleware 去執行 bodyParser.urlencoded({extended: true})
 
 
