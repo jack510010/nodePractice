@@ -1,0 +1,17 @@
+HTTP Request~~~~~~??????
+
+hyper text transfer protocol = HTTP
+超    文字    傳輸     協議
+
+------------------------------------------------------------------------------------
+5個常見的request!!!!
+
+Get Request  獲得一些資訊，最常見的一種
+
+Post Request  給資訊
+
+Put Request
+
+Patch Request
+
+Delete Request
