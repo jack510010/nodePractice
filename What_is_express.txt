@@ -1,0 +1,13 @@
+WHAT~~IS~~EXPRESS ????????
+
+It's a module.
+可以在npmjs這個網站找到它
+-----------------------------------------------------------------
+It's a framework for node.js application.
+它是一個框架，為了node.js application
+
+既然是框架就表示有一定程度的規則與限制，不像「library那樣方便，例如bootstrap」
+library可以選擇哪些你喜歡，哪些你不喜歡來使用。framework就不能這樣，要照規範來走
+----------------------------------------------------------------------------
+
+It help us write node.js faster.
