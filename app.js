@@ -3,15 +3,8 @@ const app = express();
 
 app.get('/', (req, res) => {   // '/' 就是homepage的意思
 
-    //res.send('<h1>You are on the homepage.</h1>')   // res.send() 可以送html的標籤
-
-    //res.sendFile(__dirname + '/index.html');  // res.sendFile() 可以送整個html檔案，記得要加__dirname
-
-    let jackson = {
-        name: 'Jackson',
-        age: 22,
-    };
-    res.send(jackson);  // json格式
+    
+    res.send('This is homepage.')
 });
 
 app.get('/albert', (req, res) => {
@@ -21,6 +14,14 @@ app.get('/albert', (req, res) => {
 app.get('/mike', (req, res) => {
     res.send("This is Mike's page.");
 });
+
+
+// routing for all。 意思是所有不符合路由的網址都會到這裡來。 他要放在最後一個路由，不能放在第一個路由
+app.get('*', (req,res) => {
+    res.send('Cannot find what you want.');
+});
+
+// routing for all。結束----------------------------------------------------------------
 
 let port = 3000
 app.listen(port, ()=>{
