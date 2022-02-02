@@ -12,11 +12,12 @@ app.use(bodyParser.urlencoded({extended: true}));  // 然後寫一個middleware 
 
 
 app.get('/', (req, res) => {   
-
-    res.sendFile(path.join(__dirname, 'index.html'));
+    //console.log(res.statusCode);
+    res.send('this is home page');
 });
 
 app.get('/albert', (req, res) => {
+    // console.log(res.statusCode);
     res.send("This is Albert's page.");
 });
 
@@ -24,15 +25,12 @@ app.get('/mike', (req, res) => {
     res.send("This is Mike's page.");
 });
 
+app.get('*', (req, res) => {
+    res.status(404);
+    // console.log(res.statusCode);
+    res.sendFile(path.join(__dirname, 'error.html'));
+})
 
-// routing for query 
-app.get('/formHandling', (req, res) => {
-    //console.log(req.query); // 看看req.query 到底長什麼樣子
-
-    let {fullname, age} = req.query;
-    res.send('thanks for sending data. ' + `Nice too meet you ${fullname}. I'm ${age} years old too.`)
-   
-});
 
 // 結束----------------------------------------------------------------
 
