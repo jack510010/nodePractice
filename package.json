@@ -24,5 +24,6 @@
   "homepage": "https://github.com/jack510010/nodePractice#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "keywords": []
 }
