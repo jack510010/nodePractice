@@ -16,9 +16,11 @@ app.get('/mike', (req, res) => {
 });
 
 
-// routing for all。 意思是所有不符合路由的網址都會到這裡來。 他要放在最後一個路由，不能放在第一個路由
-app.get('*', (req,res) => {
-    res.send('Cannot find what you want.');
+// routing for pattern。 
+app.get('/:fruit/:someFruit', (req, res) => {
+    console.log(req.params);
+    //res.send("you're looking for " + req.params.someFruit + '.')
+    res.send('you are looking for what? ' + `<p>${req.params.fruit}</p>` + 'What kind of fruit? ' + `<p>${req.params.someFruit}</p>`)
 });
 
 // routing for all。結束----------------------------------------------------------------
