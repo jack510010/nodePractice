@@ -9,7 +9,8 @@
   "description": "this is for learning npm and node.js",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "myapp": "nodemon app.js"
   },
   "repository": {
     "type": "git",
