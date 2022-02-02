@@ -17,10 +17,13 @@ app.get('/mike', (req, res) => {
 
 
 // routing for pattern。 
-app.get('/:fruit/:someFruit', (req, res) => {
+app.get('/fruit/:someFruit', (req, res) => {
+
     console.log(req.params);
-    //res.send("you're looking for " + req.params.someFruit + '.')
-    res.send('you are looking for what? ' + `<p>${req.params.fruit}</p>` + 'What kind of fruit? ' + `<p>${req.params.someFruit}</p>`)
+
+    let {someFruit} = req.params;
+    res.send("you're looking for " + someFruit + '.')
+    //res.send('you are looking for what? ' + `<p>${req.params.fruit}</p>` + 'What kind of fruit? ' + `<p>${req.params.someFruit}</p>`)
 });
 
 // routing for all。結束----------------------------------------------------------------
