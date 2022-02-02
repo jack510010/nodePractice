@@ -25,13 +25,12 @@ app.get('/mike', (req, res) => {
 
 
 // routing for query 
-app.post('/formHandling', (req, res) => {
+app.get('/formHandling', (req, res) => {
+    //console.log(req.query); // 看看req.query 到底長什麼樣子
 
-    //console.log(req.body); 可以看到req.body 到底長什麼樣子
-
-    let {fullname, age} = req.body;  // 再來就是取得 req.body 裡面的東西
-
-    res.send(`thanks for posting. Your name is ${fullname} and your age is ${age}.`);  // 就可以把用戶的資料變數拿來自己用。
+    let {fullname, age} = req.query;
+    res.send('thanks for sending data. ' + `Nice too meet you ${fullname}. I'm ${age} years old too.`)
+   
 });
 
 // 結束----------------------------------------------------------------
