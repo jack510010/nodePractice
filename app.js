@@ -1,10 +1,18 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const bodyParser = require('body-parser');  // 一開始先取得 bodyParser 的 module
 
-app.get('/', (req, res) => {   // '/' 就是homepage的意思
 
-    
-    res.send('This is homepage.')
+app.use(bodyParser.urlencoded({extended: true}));  // 然後寫一個middleware 去執行 bodyParser.urlencoded({extended: true})
+
+
+
+
+
+app.get('/', (req, res) => {   
+
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/albert', (req, res) => {
@@ -16,17 +24,17 @@ app.get('/mike', (req, res) => {
 });
 
 
-// routing for pattern。 
-app.get('/fruit/:someFruit', (req, res) => {
+// routing for query 
+app.post('/formHandling', (req, res) => {
 
-    console.log(req.params);
+    //console.log(req.body); 可以看到req.body 到底長什麼樣子
 
-    let {someFruit} = req.params;
-    res.send("you're looking for " + someFruit + '.')
-    //res.send('you are looking for what? ' + `<p>${req.params.fruit}</p>` + 'What kind of fruit? ' + `<p>${req.params.someFruit}</p>`)
+    let {fullname, age} = req.body;  // 再來就是取得 req.body 裡面的東西
+
+    res.send(`thanks for posting. Your name is ${fullname} and your age is ${age}.`);  // 就可以把用戶的資料變數拿來自己用。
 });
 
-// routing for all。結束----------------------------------------------------------------
+// 結束----------------------------------------------------------------
 
 let port = 3000
 app.listen(port, ()=>{

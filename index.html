@@ -8,10 +8,13 @@
     
   </head>
   <body>
-    <h1>This is the home page</h1>
-    <p>
-      Welcome.
-    </p>
+    <form action="/formHandling" method="post">
+      <label for="fullname">Your name</label>
+      <input type="text" id="fullname" name="fullname">
+      <label for="age">Your age</label>
+      <input type="number" name="age" id="age">
+      <button type="submit">submit</button>
+    </form>
     
 
     <script src="./app.js"></script>
