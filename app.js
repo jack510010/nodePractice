@@ -22,7 +22,8 @@ app.get('/albert', (req, res) => {
 });
 
 app.get('/mike', (req, res) => {
-    res.send("This is Mike's page.");
+    res.status(302);
+    res.sendFile(path.join(__dirname, 'moved.html'))
 });
 
 app.get('*', (req, res) => {
