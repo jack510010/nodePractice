@@ -1,9 +1,11 @@
-const cowsay = require("cowsay");
+const express = require('express');
+const app = express();
 
-console.log(cowsay.say({
-    text : "I'm a cool cow",
-    e : "OO",
-    T : "U "
-}));
+app.get('/', (req, res) => {
+    res.send('You are on the homepage.')
+});
 
-// or cowsay.think()
+let port = 3000
+app.listen(port, ()=>{
+    console.log(`server is running on port ${port}`);
+});
